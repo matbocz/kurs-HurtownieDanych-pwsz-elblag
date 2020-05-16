@@ -1,0 +1,226 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6555b7f3-42bc-4e35-870e-25b92a96ba55" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Account</ID>
+  <Name>Account</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b00aebc1-279a-4617-81d1-624870aa1900">
+    <DataSourceViewID>Adventure Works DW2017</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="c414024d-bb33-418c-802f-110c30a76f92">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="a5756653-1731-4181-92f5-2a74ea7188c6">
+      <ID>Account Key</ID>
+      <Name>Account Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="63bb8a7e-8e5a-4fe9-a28c-94ff72aaf62c">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ea4c40cd-f242-48e8-b906-d58cc94cb2ad">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>AccountKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="223e5f62-2a4d-4dcc-8cb5-9162303bbbec">
+          <AttributeID>Parent Account Key</AttributeID>
+          <Name>Parent Account Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="57c07755-895b-4b0d-8a75-2f2939f3ac78">
+          <AttributeID>Account Description</AttributeID>
+          <Name>Account Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4c48ee86-f1fb-49c4-88e5-cd533f361a94">
+          <AttributeID>Account Type</AttributeID>
+          <Name>Account Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fa820124-4419-4ea3-ba21-bcf72c097812">
+          <AttributeID>Operator</AttributeID>
+          <Name>Operator</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="40e05aab-33a8-4582-8fee-b8ace738c626">
+          <AttributeID>Custom Members</AttributeID>
+          <Name>Custom Members</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9643a0de-b7a4-4381-bdf0-28291e3580b3">
+          <AttributeID>Value Type</AttributeID>
+          <Name>Value Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8d3c7298-8431-48b5-a5d3-32f2aaa231cf">
+          <AttributeID>Custom Member Options</AttributeID>
+          <Name>Custom Member Options</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2112d406-c7ea-48ad-bf9d-9a62dff4bc48">
+      <ID>Parent Account Key</ID>
+      <Name>Parent Account Key</Name>
+      <Usage>Parent</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="82b044c9-50e7-4dea-aed5-8b9e4411ba6e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3aafd370-6016-4549-9feb-2639391fe8a4">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>ParentAccountKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b79c1da0-b2ec-4613-892d-5a6e51f7cc91">
+      <ID>Account Description</ID>
+      <Name>Account Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5d4df90d-f055-4e94-8e3c-04848c33cc9d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="848b40de-b752-4498-a463-85ce85e00761">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>AccountDescription</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5a304697-71b3-4922-a374-9c421e10ff80">
+      <ID>Account Type</ID>
+      <Name>Account Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3d8a2645-d08d-44fb-9395-b41288deea0a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08be96cb-c260-4c4f-844a-e2d69b9588b4">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>AccountType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6e8df7bc-1b89-46c6-af4a-d56f93142459">
+      <ID>Operator</ID>
+      <Name>Operator</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="593ff815-3bf0-4756-a4c9-abfaf533381f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f36ba56-4c81-45b6-a461-8c69cf7c2fbe">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>Operator</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0ac13c2c-37c1-4f8a-9f2e-5980fc6d2561">
+      <ID>Custom Members</ID>
+      <Name>Custom Members</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="baba6b27-3c10-4bca-bdf3-6d33b9b1a4a3">
+          <DataType>WChar</DataType>
+          <DataSize>300</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="17bc3b61-d2ad-48dd-b7ef-a2d72c9b2c56">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>CustomMembers</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="85a1f3d0-2b38-4cf7-93f4-95516421c0e6">
+      <ID>Value Type</ID>
+      <Name>Value Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a1ad482d-ee98-40f8-ba01-e86bda880db7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4dcb20e3-ccbb-4303-8ad3-0d8477628ef7">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>ValueType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ca4e81ad-c445-4708-ba06-1ccd6394ab7e">
+      <ID>Custom Member Options</ID>
+      <Name>Custom Member Options</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b617dbe3-b4f0-4edb-930a-b39f81b817df">
+          <DataType>WChar</DataType>
+          <DataSize>200</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c45b1282-d0b8-45ad-93c6-3c6bbce5ec94">
+            <TableID>dbo_DimAccount</TableID>
+            <ColumnID>CustomMemberOptions</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

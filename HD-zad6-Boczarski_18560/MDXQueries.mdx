@@ -1,0 +1,72 @@
+--Zapytanie jednowymiarowe
+--Wybranie sum cen jednostkowych wszystkich produktów
+select [Measures].[Unit Price] on columns,
+[Product].[Model Name] on rows
+from [Adventure Works DW2017];
+
+--Wybranie ceny jednostkowej produktu o nazwie Classic Vest
+select [Measures].[Unit Price] on columns,
+[Product].[Model Name].&[Classic Vest] on rows
+from [Adventure Works DW2017];
+
+--Wybranie ceny jednostkowej kilku produktów : Classic Vest,Bike Wash,[Hitch Rack - 4-Bike]
+select [Measures].[Unit Price] on columns,
+{
+[Product].[Model Name].&[Classic Vest] ,
+[Product].[Model Name].&[Bike Wash],
+[Product].[Model Name].&[Hitch Rack - 4-Bike]
+} on rows
+from [Adventure Works DW2017];
+
+--Ogranicz poprzednie zapytanie do okresu czasu miesiêcy April
+select [Measures].[Unit Price] on columns,
+{
+[Product].[Model Name].&[Classic Vest] ,
+[Product].[Model Name].&[Bike Wash],
+[Product].[Model Name].&[Hitch Rack - 4-Bike]
+} on rows
+from [Adventure Works DW2017]
+where [Order Date].[Month Name].&[April];
+
+--Ogranicz poprzednie Zapytanie do okresu czasu kwietnia 2010r
+select ([Measures].[Unit Price])on columns,
+{
+[Product].[Model Name].&[Classic Vest] ,
+[Product].[Model Name].&[Bike Wash],
+[Product].[Model Name].&[Hitch Rack - 4-Bike]
+} on rows
+from [Adventure Works DW2017]
+where
+(
+[Order Date].[Month Name].&[April],
+[Due Date].[Year].&[2010]
+);
+
+--Zapytanie z klauzula  WITH MEMBER pozwala definiowaæ wyra¿enia wyliczane
+WITH MEMBER temp as '[Measures].[Unit Price]*2'
+select
+temp on columns,
+{
+[Product].[Model Name].&[Classic Vest] ,
+[Product].[Model Name].&[Bike Wash],
+[Product].[Model Name].&[Hitch Rack - 4-Bike]
+} on rows
+from [Adventure Works DW2017]
+where ( [Order Date].[Month Name].&[April],[Due Date].[Year].&[2010]);
+
+--Zapytanie z klauzula WITH SET pozwala definiowaæ zbiory
+--Poni¿sze zapytanie zwraca cenê jednostkowa oraz liczbê zamówieñ produktów o nazwie modelu
+--[Classic Vest]
+--[Bike Wash]
+--[Hitch Rack - 4-Bike]
+--w miesiacu kwiecien 2010
+WITH SET temp as '{[Measures].[Unit Price],[Measures].[Order quantity]}'
+select
+temp on columns,
+{
+[Product].[Model Name].&[Classic Vest] ,
+[Product].[Model Name].&[Bike Wash],
+[Product].[Model Name].&[Hitch Rack - 4-Bike]
+} on rows
+from [Adventure Works DW2017]
+where ( [Order Date].[Month Name].&[April],[Due Date].[Year].&[2010]);
